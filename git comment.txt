@@ -11,7 +11,7 @@ git add .
 git commit -m "Added another diary entry for feature work"
 git push -u origin feature-newFunc
 git rebase -i HEAD~2
-（编辑第一个commit前的动作为pick，第二个commit前的动作为squash）
+  编辑第一个commit前的动作为pick，第二个commit前的动作为squash
 git push --force
 git checkout main
 git merge feature-newFunc
@@ -48,14 +48,13 @@ git merge --continue
 git push
 
 任务五
-git checkout -b documentation --track origin/documentation
 git checkout documentation
 git rebase -i HEAD~4
-（contributing guide->installation guide->overview）
-pick 2fc2e17 Add contributing guide
-pick 9cf2a7d Add installation guide
-pick 1d3dee7 Update project overview with new feature description
-squash 9caa536 Fix description in project overview
+  #（contributing guide->installation guide->overview）
+  pick 2fc2e17 Add contributing guide
+  pick 9cf2a7d Add installation guide
+  pick 1d3dee7 Update project overview with new feature description
+  squash 9caa536 Fix description in project overview
 git checkout main
 git merge documentation
 git push
